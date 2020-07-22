@@ -7,8 +7,7 @@ const app = express();
 const alert = require("alert-node");
 const mustacheExpress = require("mustache-express");
 require("dotenv").config();
-console.log(accountSid);
-console.log(authToken);
+
 //middleware
 app.use(express.urlencoded());
 
@@ -31,7 +30,7 @@ app.post("/send-fact", (req, res) => {
       let number = req.body.number;
       client.messages
         .create({
-          to: `+12819048366`,
+          to: `+1${number}`,
           from: "+12512500835",
           body: `This fact is brought to you by the Random Useless Facts API:
           ${fact}`,
