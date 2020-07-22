@@ -6,7 +6,6 @@ const express = require("express");
 const app = express();
 const alert = require("alert-node");
 const mustacheExpress = require("mustache-express");
-require("dotenv").config();
 
 //middleware
 app.use(express.urlencoded());
